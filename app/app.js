@@ -7,9 +7,9 @@ var bodyParser   = require('body-parser');
 
 
 var mongoose = require('mongoose');  
-mongoose.connect('mongodb://localhost/dafuckmyli_ve');
+// mongoose.connect('mongodb://localhost/dafuckmyli_ve');
 
-// mongoose.connect('mongodb://heroku_mfstx9tp:qwerty123456789@ds143588.mlab.com:43588/heroku_mfstx9tp');
+mongoose.connect('mongodb://heroku_mfstx9tp:eesh2l0mcgehm7ruam0icidhn4@ds143588.mlab.com:43588/heroku_mfstx9tp');
 
 
 var db = mongoose.connection;
