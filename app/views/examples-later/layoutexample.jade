@@ -1,0 +1,81 @@
+doctype html
+html
+  head
+    title= title
+    
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons')    
+    
+    
+    //-link(rel='stylesheet', href='/stylesheets/wizard/font-awesome.min.css') 
+    link(rel='stylesheet', href='/stylesheets/wizard/bootstrap.min.css') 
+
+    link(rel='stylesheet', href='/stylesheets/wizard/material-kit.css') 
+
+    link(rel='stylesheet', href='/stylesheets/wizard/material-bootstrap-wizard.css') 
+   
+    link(rel='stylesheet', href='/stylesheets/wizard/demo.css') 
+    
+    //-script(src='//load.sumome.com/', data-sumo-site-id="ee897a9c0203036e816bb1625aceab56745302211ba3102f09e880c9b58c33c7", async="async" )
+
+  body.index-page
+
+    .wrapper
+      .header.header-filter(style="background-image: url('/images/thumb_list_place.png'); height:500px;")
+        .container
+          .row
+
+
+
+            .col-md-6
+
+              h1.title Example 1
+              h4 Every landing page needs a small description after the big bold title, that's why we added this text here. Add here all the information that can make you or your product create the first impression.
+              br
+              a.btn.btn-danger.btn-raised.btn-large(href="http://youtube.com") Watch Video
+                .icon
+                  i.material-icons play_arrow
+                
+                      
+
+
+      .main.main-raised
+        
+          .section.section-full-screen.section-signup     
+            .container
+              .section.section-landing 
+
+                .row
+                  .col-sm-8.col-md-offset-2
+                    h2.title Let's talk product
+                    h5.description
+                    ul
+                      li 1
+                      li 2
+                      li 3
+                      li 4  
+
+                    block content 
+
+
+          .space-50
+
+        
+
+      footer.footer
+        .container
+
+
+
+
+
+    script(src='/javascripts/wizard/jquery-2.2.4.min.js')
+    
+    script(src='/javascripts/wizard/bootstrap.min.js')
+    script(src='/javascripts/wizard/jquery.bootstrap.js')
+
+    script(src='/javascripts/wizard/jquery.validate.min.js') //- clean up this layout file. remove unnecessry scripts
+
+    script(src='/javascripts/wizard/material.min.js')
+
+    script(src='/javascripts/wizard/material-bootstrap-wizard.js')
+

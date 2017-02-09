@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  form#formSubmitVideo(name="formsubmit",method="post",action="/insert")
+    input#inputUrl(type="text", placeholder="Youtube Url", name="url")
+    br
+    input#inputStart(type="text", placeholder="Start Time", name="start")
+    br
+    input#inputEnd(type="text", placeholder="End Time", name="end")
+    br
+    button#btnSubmit(type="submit") submit
+
+
+  //- p Welcome to #{title}
+  //-  ul
+  //-    each user, i in userlist
+  //-      li
+  //-        - var foo = user.email + "  " + user.username
+  //-        a(href="mailto:#{user.email}")= foo

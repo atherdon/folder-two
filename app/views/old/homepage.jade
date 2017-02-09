@@ -1,0 +1,240 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    | &#x9;
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    | &#x9;
+    title
+      | #{title}
+    | &#x9;
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    |     
+    meta(name='viewport', content='width=device-width')
+    | &#x9;
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/img/apple-icon.png')
+    | &#x9;
+    link(rel='icon', type='image/png', href='assets/img/favicon.png')
+    // Fonts and icons
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css')
+    // CSS Files
+    link(href='assets/css/bootstrap.min.css', rel='stylesheet')
+    | &#x9;
+    link(href='assets/css/material-bootstrap-wizard.css', rel='stylesheet')
+    // CSS Just for demo purpose, don't include it in your project
+    link(href='assets/css/demo.css', rel='stylesheet')
+    | &#x9;
+    style.
+  body
+
+
+  
+    .image-container.set-full-height(style="background-image: url('assets/img/wizard-book.jpg')")
+      // <div class="image-container set-full-height" >
+      // Big container
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            // Wizard container
+            .wizard-container
+              #wizard.card.wizard-card(data-color='red')
+                form(action='', method='')
+                  .wizard-header
+                    h3.wizard-title
+                      // Book a Room
+                      | Start and End points for Youtube videos.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    h5
+                      | Want to share video with friend?
+                      | But only short version with start and end point?
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .wizard-navigation
+                    ul
+                      li
+                        a(href='#details', data-toggle='tab')
+                          | Youtube link
+                      | &#x9;&#x9;&#x9;                            
+                      li
+                        a(href='#captain', data-toggle='tab')
+                          | Video Type
+                      | &#x9;&#x9;&#x9;                            
+                      li
+                        a(href='#description', data-toggle='tab')
+                          | Extra Details
+                  | &#x9;&#x9;                        
+                  .tab-content
+                    #details.tab-pane
+                      .row
+                        .col-sm-12
+                          h4.info-text
+                            | Let&apos;s start with the basic details.
+                        | &#x9;&#x9;&#x9;                            &#x9;
+                        .col-sm-10.col-sm-offset-1
+                          .input-group
+                            span.input-group-addon
+                              i.material-icons
+                                | link
+                            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                            .form-group.label-floating
+                              label.control-label
+                                | Link 
+                                small (required)
+                              | &#x9;&#x9;&#x9;                                            
+                              input.form-control.input-lg(name='name', type='text')
+                              | &#x9;&#x9;&#x9;                                            
+                              .hint
+                                | Links like https://www.youtube.com/watch?v=WbIPHjHoYaA or https://youtu.be/G1aSAQ1CibQ accepted
+                              | &#x9;&#x9;&#x9;                                        
+                              span.material-input
+                    | &#x9;&#x9;                            
+                    #captain.tab-pane
+                      h4.info-text What type of video would you store? 
+                      | &#x9;&#x9;                                
+                      .row
+                        .col-sm-10.col-sm-offset-1
+                          .col-sm-4
+                            .choice(data-toggle='wizard-radio', rel='tooltip', title='You will have ability to use minutes and seconds')
+                              input(type='radio', name='job', value='Design')
+                              | &#x9;&#x9;                                                
+                              .icon
+                                // <i class="material-icons">exposure zero</i>
+                                i.material-icons exposure_zero
+                              | &#x9;&#x9;                                                
+                              h4 Short video
+                              | &#x9;&#x9;                                                
+                              h6  &lt; 10 minutes 
+                          | &#x9;&#x9;                                        
+                          .col-sm-4
+                            .choice(data-toggle='wizard-radio', rel='tooltip', title='Select this if want to use minutes only')
+                              input(type='radio', name='job', value='Code')
+                              | &#x9;&#x9;                                                
+                              .icon
+                                // <i class="material-icons">home</i>
+                                i.material-icons exposure_plus_1
+                              | &#x9;&#x9;                                                
+                              h4 Medium video
+                              | &#x9;&#x9;                                                
+                              h6  &gt; 10 minutes 
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          .col-sm-4
+                            .choice(data-toggle='wizard-radio', rel='tooltip', title='Select this option if you want to use 5 minutes time range')
+                              input(type='radio', name='job', value='Code')
+                              | &#x9;&#x9;                                                
+                              .icon
+                                // <i class="material-icons">business</i>
+                                i.material-icons exposure_plus_2
+                              // <h6>Business</h6>
+                              h4 Long video
+                              | &#x9;&#x9;                                                
+                              h6  &gt; 30 minutes 
+                    | &#x9;&#x9;                            
+                    #description.tab-pane
+                      .row
+                        h4.info-text
+                          | Drop us a small description.
+                        | &#x9;&#x9;                                    
+                        h6.info-text
+                          | You can skip this step if you don&apos;t know time you want
+                        | &#x9;&#x9;                                    
+                        .col-sm-5.col-sm-offset-1
+                          .form-group
+                            label Start Time
+                            | &#x9;&#x9;                                            
+                            input#start.form-control(type='text', name='startPoint')
+                        | &#x9;&#x9;                                    
+                        .col-sm-5
+                          .form-group
+                            label End
+                            | &#x9;&#x9;                                            
+                            input#start.form-control(type='text', name='endPoint')
+                        | &#x9;&#x9;                                    
+                        .col-sm-10.col-sm-offset-1
+                          .form-group
+                            label Title
+                            | &#x9;&#x9;                                            
+                            input#title.form-control(type='text', name='title')
+                        | &#x9;&#x9;                                    
+                        .col-sm-6.col-sm-offset-1
+                          .form-group
+                            label
+                              | Video description
+                            | &#x9;&#x9;                                            
+                            textarea.form-control(placeholder='', rows='6')
+                        | &#x9;&#x9;                                    
+                        .col-sm-4
+                          .form-group
+                            label.control-label
+                              | Example
+                            | &#x9;&#x9;                                            
+                            p.description
+                              | &quot;The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it.&quot;
+                  | &#x9;                        &#x9;
+                  .wizard-footer
+                    .pull-right
+                      input.btn.btn-next.btn-fill.btn-danger.btn-wd(type='button', name='next', value='Next')
+                      | &#x9;                                    
+                      input.btn.btn-finish.btn-fill.btn-danger.btn-wd(type='button', name='finish', value='Finish')
+                    | &#x9;                                
+                    .pull-left
+                      input.btn.btn-previous.btn-fill.btn-default.btn-wd(type='button', name='previous', value='Previous')
+                    | &#x9;                                
+                    .clearfix
+            // wizard container
+        // row
+        // ***************
+        // just cards
+        .cards
+          .container
+            .title
+              h3 Examples
+            |                         
+            .row
+
+
+              .col-md-6
+                .card.card-background(style="background-image: url('jessjo.jpg')")
+                  .content.content-video
+                    a(href='#')
+                      .icon
+                        i.material-icons play_arrow
+                        // <i class="material-icons">play_circle_outline</i>
+                    | &#x9;    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    h3.card-title Jessica Jones Window Crack Example
+              |     
+
+
+              .col-md-6
+                .card.card-background(style="background-image: url('bp4.jpg')")
+                  .content.content-video
+                    a(href='#')
+                      .icon
+                        i.material-icons play_arrow
+                        // <i class="material-icons">play_circle_outline</i>
+                    | &#x9;    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    h3.card-title Black Panter Featurette Example
+              |      
+
+
+              .col-md-6
+                .card.card-background(style="background-image: url('logan2.png')")
+                  .content.content-video
+                    a(href='#')
+                      .icon
+                        i.material-icons play_arrow
+                        // <i class="material-icons">play_circle_outline</i>
+                    | &#x9;    &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    h3.card-title Logan epic kill from trailer
+
+
+      // big container
+  // Core JS Files
+  script(src='assets/js/jquery-2.2.4.min.js', type='text/javascript')
+  | &#x9;
+  script(src='assets/js/bootstrap.min.js', type='text/javascript')
+  | &#x9;
+  script(src='assets/js/jquery.bootstrap.js', type='text/javascript')
+  // Plugin for the Wizard
+  script(src='assets/js/material-bootstrap-wizard.js')
+  // More information about jquery.validate here: http://jqueryvalidation.org/
+  script(src='assets/js/jquery.validate.min.js')

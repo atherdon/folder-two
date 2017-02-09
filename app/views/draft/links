@@ -1,0 +1,5 @@
+links
+
+
+mongod.exe --dbpath f:\code\2\tabaza\data
+

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{title}
+  br
+  video#vid1.video-js.vjs-default-skin(controls='', width='640', height='264', data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "#{url}" }] }')
+  p.vjs-no-js
+    | To view this video please enable JavaScript, and consider upgrading to a web browser
+    | that 
+    a(href='http://videojs.com/html5-video-support/', target='_blank') supports HTML5 video
+  br  
+  h3 #{desc}  
+  br
+  p #{start} #{end} #{type}

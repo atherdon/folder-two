@@ -1,0 +1,13 @@
+with dropdown
+
+.input-group
+	input#inputStart.form-control(type="text",  name="start")
+	.input-group-btn
+	  button.btn.btn-default.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Action
+	    span.caret
+	  ul.dropdown-menu.dropdown-menu-right.drop-vasua  
+	    li
+	      a#hours(href="#") Hours Mode
+
+	    li
+	      a#minutes(href="#") Minutes Mode  

@@ -1,0 +1,43 @@
+extends layoutplayer
+
+block content
+  .row
+    .col-sm-12
+      h4 #{title}
+      br
+      video#vid1.video-js.vjs-default-skin(controls='', width='640', height='264', data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "#{url}" }] }')  
+        p.vjs-no-js
+          | To view this video please enable JavaScript, and consider upgrading to a web browser
+          | that 
+          a(href='http://videojs.com/html5-video-support/', target='_blank') supports HTML5 video
+      br  
+      h3 #{desc}  
+      br
+      p start: #{start} end: #{end} type: #{type_} slug: #{slug}
+  
+
+      form#formSubmitVideo(name="formsubmit",method="post",action="/insert2")
+        input#inputUrl(type="hidden", name="url", value="#{url}")
+        input#inputVideoType(type="hidden", name="type_" value="#{type_}")
+        input#inputStart(type="hidden", name="start", value="#{start}")
+        input#inputEnd(type="hidden", name="end", value="#{end}")
+        input#inputTitle(type="hidden", name="title", value="#{title}")
+        input#desc(type="hidden", name="desc", value="#{desc}")
+        input#slug(type="hidden", name="slug", value="#{slug}")
+
+        button.btn.btn-next.btn-fill.btn-success.btn-wd#btnSubmit(type="submit") Submit to Database
+
+    //video#vid1.video-js.vjs-default-skin(controls='', width='650', height='250', data-setup='{}')
+    //source(src='/images/ZoeWood.mp4', type='video/mp4')
+      #time-range
+        p Time Range:
+          span.slider-time  #{}
+          span.slider-time2 #{}
+          br
+          Total Time:
+          span.total 1:46 sec
+          br
+          Crop size:
+          span.duration 20 sec
+        #sliders_step1  
+

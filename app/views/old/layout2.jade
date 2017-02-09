@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    title= title
+    
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons')    
+    
+    link(rel='stylesheet', href='/stylesheets/1/video-js.css')        
+    //- @todo move custom styles from html to project
+    //- @todo clean up different styles, that we're not using anymore
+    //-
+    //-link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css') 
+    link(rel='stylesheet', href='/stylesheets/2/font-awesome.min.css') 
+    link(rel='stylesheet', href='/stylesheets/2/bootstrap.min.css') 
+
+    link(rel='stylesheet', href='/stylesheets/3/material-kit.css') 
+
+    link(rel='stylesheet', href='/stylesheets/2/material-bootstrap-wizard.css') 
+
+    link(rel='stylesheet', href='/stylesheets/3/addon.css') 
+
+    //- CSS Just for demo purpose, don't include it in your project
+    //-link(rel='stylesheet', href='/stylesheets/2/demo.css') 
+    //-link(rel='stylesheet', href='/stylesheets/2/other.css') 
+  body
+
+    .image-container.set-full-height(style="background-image: url('/images/wizard-book.jpg')")
+      // Big container
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            // Wizard container
+            .wizard-container
+              #wizard.card.wizard-card(data-color='red')
+                
+                block content  	
+
+            // wizard container
+        // row           
+      // big container
+
+
+    //-block content
+
+
+
+
+    script(src='/javascripts/2/jquery-2.2.4.min.js')
+    //- script(src='https://code.jquery.com/jquery-2.2.4.js')
+    script(src='/javascripts/2/bootstrap.min.js')
+    script(src='/javascripts/2/jquery.bootstrap.js')
+
+    script(src='/javascripts/2/jquery.validate.min.js')
+
+
+    script(src='/javascripts/3/material.min.js')
+
+    script(src='/javascripts/2/material-bootstrap-wizard.js')
+
+    //-
+    //-script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')
+    //script(src='/javascripts/2/jquery-ui.js')
+    script(src='/javascripts/videojs-5-5-8.js')
+    //-script(src='/javascripts/1/jquery-asRange.js')
+    //-script(src='/javascripts/1/jquery.formatter.js')
+    //- 
+    script(src='/javascripts/youtube.js')
+    script(src='/javascripts/badcode.js')
+    //-script(src='/javascripts/scripts.js') //- @todo deal with this
+    

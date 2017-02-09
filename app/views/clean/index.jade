@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form#formSubmitVideo(name="formsubmit",method="post",action="/insert")
+    input#inputUrl(type="text", placeholder="Youtube Url", name="url")
+    br
+    input#inputVideoType1(type="radio", name="type_" value="1")
+    label VALUE1
+    br
+    input#inputVideoType2(type="radio", name="type_" value="2")
+    label VALUE2
+    br
+    input#inputVideoType3(type="radio", name="type_" value="3")
+    label VALUE3
+    br
+    input#inputStart(type="text", placeholder="Start Time", name="start")
+    br
+    input#inputEnd(type="text", placeholder="End Time", name="end")
+    br
+    input#inputTitle(type="text", placeholder="Title", name="title")
+    br
+    textarea#desc(name="desc")
+    br
+    button#btnSubmit(type="submit") submit
+    //- create array with examples ids, use each and display it on homepage in cool way
