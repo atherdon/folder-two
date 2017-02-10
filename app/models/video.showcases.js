@@ -4,6 +4,56 @@
 //@todo create other sample using same video functionality
 function saveExamplesToDatabase() {
 
+
+https://youtu.be/G1aSAQ1CibQ?t=1m26s
+https://youtu.be/Lt-U_t2pUHI?t=41s
+https://youtu.be/Q88JeXtKMDY?t=44s
+https://youtu.be/nWHUjuJ8zxE?t=1m31s
+
+
+	// video frames 
+	var cg1 = new Video({
+		title : '',
+		url   : 'https://www.youtube.com/watch?v=WbIPHjHoYaA',
+		desc  : '',
+		start : 47,
+		end   : 55,
+		step  : 1,
+		slug  : 'G1aSAQ1CibQ',
+	});
+
+	var cg2 = new Video({
+		title : '',
+		url   : 'https://www.youtube.com/watch?v=WbIPHjHoYaA',
+		desc  : '',
+		start : 47,
+		end   : 55,
+		step  : 1,
+		slug  : 'Lt-U_t2pUHI',
+	});
+
+	var cg3 = new Video({
+		title : '',
+		url   : 'https://www.youtube.com/watch?v=WbIPHjHoYaA',
+		desc  : '',
+		start : 47,
+		end   : 55,
+		step  : 1,
+		slug  : 'Q88JeXtKMDY',
+	});
+
+	var cg4 = new Video({
+		title : '',
+		url   : 'https://www.youtube.com/watch?v=WbIPHjHoYaA',
+		desc  : '',
+		start : 47,
+		end   : 55,
+		step  : 1,
+		slug  : 'nWHUjuJ8zxE',
+	});
+
+
+	// showcase frames
 	var a1 = new Video({
 		title : 'Laura Haddock from Captain America?',
 		url   : 'https://www.youtube.com/watch?v=WbIPHjHoYaA',

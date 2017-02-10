@@ -88,6 +88,7 @@ router.get('/example', function(req, res){
 router.get('/mongotest', function(req, res, next) {
   
 	var firstRow  = new Video({
+		 _id:  "thetest",
 	     title : "Title1",
 	     url   : "http://www.google.com",
 	     desc  : "desc",
@@ -97,25 +98,25 @@ router.get('/mongotest', function(req, res, next) {
 	     slug  : "google"
 	  });
 
-	  var secondRow = new Video({
-	     title : "Title2",
-	     url   : "www.gmail.com",
-	     desc  : "description very long variable",
-	     start : 10,
-	     end   : 280,
-	     step  : 60,
-	     slug  : "gmail",
-	  });
+	  // var secondRow = new Video({
+	  //    title : "Title2",
+	  //    url   : "www.gmail.com",
+	  //    desc  : "description very long variable",
+	  //    start : 10,
+	  //    end   : 280,
+	  //    step  : 60,
+	  //    slug  : "gmail",
+	  // });
 
-	  var thirdRow  = new Video({
-	     title : "Title3",
-	     url   : "www.drive.com",
-	     desc  : "description",
-	     start : 60,
-	     end   : 370,
-	     step  : 300,
-	     slug  : "gdrive",
-	  });
+	  // var thirdRow  = new Video({
+	  //    title : "Title3",
+	  //    url   : "www.drive.com",
+	  //    desc  : "description",
+	  //    start : 60,
+	  //    end   : 370,
+	  //    step  : 300,
+	  //    slug  : "gdrive",
+	  // });
 
 	firstRow.save().then(function(docs){
 
@@ -125,22 +126,22 @@ router.get('/mongotest', function(req, res, next) {
 	});
 
 
-	secondRow.save();
-	thirdRow.save();
+	// secondRow.save();
+	// thirdRow.save();
 
 
 	// //get all the Videos
 
-	Video.find({}, function(err, videos) {
+	// Video.find({}, function(err, videos) {
 
-	  if (err) {
-	  	throw err;
+	//   if (err) {
+	//   	throw err;
 	  	
-	  }
+	//   }
 
-	  // object of all the videos
-	  console.log( videos );
-	});
+	//   // object of all the videos
+	//   console.log( videos );
+	// });
 
 
 
