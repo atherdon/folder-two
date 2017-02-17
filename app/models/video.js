@@ -13,7 +13,9 @@ var options = {
           timestamps: { 
                createdAt: 'created_at',
                updatedAt: 'updated_at' 
-          }    
+          },   
+
+          { _id: false }
      };
 
 /**
@@ -21,7 +23,7 @@ var options = {
  */
 
 var VideoSchema = mongoose.Schema({
-
+     _id   : String,
      title : String,
      url   : String,
      desc  : String,
