@@ -31,8 +31,7 @@ var VideoSchema = mongoose.Schema({
      end   : Number, //@todo if empty - set duration end
      step  : Number, //@todo if empty - set 1
      slug  : String,
-     // created_at: Date,
-     // updated_at: Date     
+         
   }, options );
 
 
