@@ -11,10 +11,6 @@ function saveExamplesToDatabase() {
 
 
 
-
-
-
-
 	// video frames 
 	var cg1 = new Video({
 		_id   : 'G1aSAQ1CibQ',
@@ -412,6 +408,7 @@ function saveExamplesToDatabase() {
 		step  : 1,
 		slug  : '_xYXxYh6J24',
 	});
+
 
 	//save on db
     cg1.save(); 
