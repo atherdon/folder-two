@@ -65,30 +65,38 @@ router.post('/update/', function(req, res){
 	console.log(util.inspect( req.body, false, null ));
 	console.log( req.body.id );
 
- 	Video.findById( req.body.id, function(err, video) {
-
-		if (err) 
-			res.render('empty', { title: 'Error' });
-
-
-		console.log( req.body.start );
-		console.log( req.body.end );
-		// console.log(video)	;
-
-		video.start = req.body.start;
-		video.end   = req.body.end;
-
-		video.save(function (err) {
-			if (err) throw err;
-
-			// console.log( 'updated' );
-		});
-
+	const id = req.body.id;
+	Video.findOneAndUpdate({_id:id}, {start: req.body.start, end:req.body.end}, {}, function(err, video){
 		//@todo add thank you for using our service
 		// res.redirect("index"); //@todo test title
 		// res.render('index', { title: 'CutStream | Start & End point for your video' });
-
+		if (err) 
+			res.render('empty', { title: 'Error' });
+		
 	});
+
+
+ // 	Video.findById( req.body.id, function(err, video) {
+
+	// 	if (err) 
+	// 		res.render('empty', { title: 'Error' });
+
+
+	// 	console.log( req.body.start );
+	// 	console.log( req.body.end );
+	// 	// console.log(video)	;
+
+	// 	video.start = req.body.start;
+	// 	video.end   = req.body.end;
+
+	// 	video.save(function (err) {
+	// 		if (err) throw err;
+
+	// 		// console.log( 'updated' );
+	// 	});
+
+		
+	// });
 
 
 });
