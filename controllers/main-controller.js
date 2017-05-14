@@ -38,8 +38,9 @@ exports.postVideo = function(req, res, next){
 	     slug  : slug,
 	});
 
-	// console.log( value );
-
+	// console.log( value );	
+	//@TODO change to bluebird version with async
+// http://stackoverflow.com/questions/25555139/bluebird-promisies-crud-example-using-nodejs-express-and-mongoose
 	value.save().then(function(docs){
 
 		// console.log( docs );
@@ -54,6 +55,8 @@ exports.postVideo = function(req, res, next){
 		res.render('player3', docs);
 
 	});
+
+
 
 };
 
@@ -102,7 +105,7 @@ exports.databaseConnect = function(req, res, next){
 	  //    step  : 300,
 	  //    slug  : "gdrive",
 	  // });
-
+//@TODO change to bluebird version with async
 	firstRow.save().then(function(docs){
 
 		console.log(docs);

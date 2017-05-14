@@ -4,7 +4,7 @@ var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
-
+var routeConfig  = require('./config/route-config.js');
 
 var mongoose = require('mongoose');  
 // mongoose.connect('mongodb://localhost/dafuckmyli_ve');
@@ -20,8 +20,8 @@ db.once('open', function() {
 
 
 
-var index  = require('./routes/index');
-var player = require('./routes/player');
+// var index  = require('./routes/index');
+// var player = require('./routes/player');
 
 var app = express();
 
@@ -44,10 +44,12 @@ app.use(function(req, res, next){
 	next();
 });
 
+// *** config ** //
+routeConfig.init(app); //@TODO test this configuration
 
 
-app.use('/', index);
-app.use('/player', player);
+// app.use('/', index);
+// app.use('/player', player);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
