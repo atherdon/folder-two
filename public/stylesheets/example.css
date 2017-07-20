@@ -1,1 +1,12 @@
-example.css
+.landing-page .header {
+	height: 500px;
+}
+
+@media (max-width: 991px) {
+  .landing-page .header {
+    height: auto;
+    min-height: 100vh;
+  }
+  .landing-page .header .container {
+    padding-bottom: 70px;
+  }
