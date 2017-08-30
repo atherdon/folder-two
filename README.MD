@@ -28,15 +28,4 @@ This README would normally document whatever steps are necessary to get your app
 * Repo owner or admin
 * Other community or team contact
 
-https://tkachenko-demo.herokuapp.com/ | https://git.heroku.com/tkachenko-demo.git
 
-
-mongolab-transparent-19723
-  | https://git.heroku.com/that-one.git
-
-@todo
-Sometimes youtube video cannot be displayed outside the Youtube.
-Example - Rap God - Eminem. We need to cover this case too.
-
-@todo
-Add tooltips on sliderdruggers.
